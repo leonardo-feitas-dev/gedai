@@ -1,0 +1,398 @@
+/* Define variáveis globais para cores e fontes */
+:root {
+    --azul-padrao: #072D84;
+    --azul-header: #041f5d;
+    --branco-padrao: #f4f4f4;
+    --cinza-footer: #1f1f1f;
+    --fonte-padrao: 'Barlow', sans-serif;
+}
+
+/* Reseta a margem, padding e box-sizing para todos os elementos, evitando inconsistências entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilização do header, que é fixo */
+header {
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    right: 0;
+    background-color: var(--azul-header);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    z-index: 1000; 
+    height: 5em;
+    font-size: 0.8em;
+}
+
+/* Estilização do corpo, garantindo espaço acima para não ser encoberto pelo header */
+body {
+    margin-top: 60px; 
+    font-family: var(--fonte-padrao);
+
+}
+
+/* Estilização de títulos e links do header */
+header h1, header nav a {
+    color: var(--branco-padrao);
+}
+
+header nav a {
+    margin-left: 1em;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Estilização da primeira seção */
+#home {
+    display: flex;
+    align-items: center; 
+    padding: 5px;
+    height: 36em;
+}
+
+#home h1.subtitulo {
+    font-size: 3em; /*40px*/
+    padding-bottom: 0.2em;
+    padding-left: 1em;
+}
+
+#home p {
+    font-size: 1.2em; /*28px*/
+    text-align: left;
+    padding-left: 2.6em;
+    margin-bottom: 20px;
+    width: 25em;
+}
+
+#home img {
+    max-width: 50%; 
+    height: 15em;
+    margin-left: 15em;
+    display: column; 
+}
+
+/* Estilização da segunda seção */
+#o_que_fazemos {
+    background-color: var(--azul-padrao);
+    display: flex;
+    padding: 50px 20px 50px 0;
+    color: var(--branco-padrao);
+    height: 36em;
+    align-items: center; 
+}
+
+#o_que_fazemos img {
+    flex-basis: 50%;
+    width: 40em; 
+    height: 36em;
+    margin: 0;
+}
+
+#o_que_fazemos h1, #o_que_fazemos p {
+    flex-basis: 50%;
+    padding-left: 20px;
+    text-align: left; 
+}
+
+#o_que_fazemos h1 {
+    font-size: 2.6em; 
+    margin-bottom: 10px; 
+    margin-left: 1.4em;
+    margin-right: 3em;
+}
+
+#o_que_fazemos p {
+    font-size: 1.3em; 
+    margin-top: 10px; 
+    margin-bottom: 20px; 
+    margin-left: 3em;
+    margin-right: 3em;
+}
+
+/* Estilização da terceira seção (Projetos) */
+#projetos {
+    display: flex;
+    flex-direction: column; 
+    padding: 50px 20px;
+    height: 36em; /* Alterado de 100vh para auto */
+    align-items: flex-start; 
+}
+
+#projetos .bloco__projetos {
+    background-color: var(--azul-padrao);
+    color: var(--branco-padrao);
+    padding: 20px;
+    flex-basis: 33%;
+    box-sizing: border-box;
+    border-radius: 15px;
+    margin: 20px; 
+    text-align: center;
+    display: inline-block; 
+    vertical-align: top; 
+    height: 22em; /* Alterado de min-height para height auto */
+}
+
+#projetos .bloco__projetos h2 {
+    font-size: 3.7vh; 
+    margin-bottom: 10px; 
+    text-align: center; 
+}
+
+#projetos .bloco__projetos p {
+    font-size: 3vh;
+    margin-top: 10px; 
+    margin-bottom: 20px; 
+    min-height: 100%;
+}
+
+#projetos h1 {
+    font-size: 5.7vh; 
+    text-align: left; 
+    margin-bottom: 20px;
+}
+
+.projetos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Estilização da quarta seção (AIs) */
+#AIs {
+    background-color: var(--azul-padrao);
+    color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 50px 20px;
+    align-items: flex-start;
+}
+
+#AIs .bloco__AIs {
+    background-color: var(--branco-padrao);
+    color: var(--cinza-footer);
+    padding: 20px;
+    flex-basis: calc(25% - 20px);
+    box-sizing: border-box;
+    border-radius: 15px;
+    margin: 10px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    min-width: 12em;
+    min-height: 12em;
+}
+
+#AIs .bloco__AIs h2 {
+    font-size: 1.3em;
+    margin-left: 20px;
+    text-align: left;
+}
+
+#AIs .bloco__AIs p {
+    font-size: 1.1em;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#AIs .bloco__AIs img {
+    max-width: 3em;
+    height: 3em;
+}
+
+#AIs h1 {
+    font-size: 2em;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.blocos_ai {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-width: 90%;
+}
+
+/* Estilização do rodapé */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--cinza-footer);
+    color: var(--branco-padrao);
+    height: 10em;
+}
+
+footer strong, footer .text__info_copy {
+    flex-basis: 20%;
+}
+
+footer .text__info {
+    flex-basis: 50%;
+    text-align: left;
+    text-align: justify;
+}
+
+/* Estilização da ancora */
+.projetos a{   
+    background-color: var(--azul-padrao);
+    color: var(--branco-padrao);
+    padding: 20px;
+    flex-basis: 33%;
+    box-sizing: border-box;
+    border-radius: 15px;
+    margin: 10px; 
+    text-align: center;
+    display: inline-block; 
+    vertical-align: top; 
+    min-height: 22em;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}   
+
+#link_folders {
+    padding-top: 20px;
+    border-top-width: 10px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+}
+
+.projetos a div{
+    background-color: var(--azul-padrao);
+    color: var(--branco-padrao);
+    padding: 20px;
+    flex-basis: 33%;
+    box-sizing: border-box;
+    border-radius: 15px;
+    margin: 20px; 
+    text-align: center;
+    display: inline-block; 
+    vertical-align: top; 
+    min-height: 22em;
+}
+
+.projetos a h2{
+    font-size: 1.3em; 
+    margin-bottom: 10px; 
+    text-align: center; 
+}
+
+.projetos a p{
+    font-size: 1.2em;
+    margin-top: 10px; 
+    margin-bottom: 20px; 
+}
+
+/* Media query para telas com largura máxima de 768px (tablets) */
+@media (max-width: 750px) {
+    header {
+        width: 100%;
+        display: block;
+        font-size: 18px;
+        color: var(--branco-padrao);
+        text-align: center;
+        margin-bottom: 10px;
+        
+    }
+
+    /* Estilos para a primeira seção - reorganizando elementos */
+    #home {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0;
+        height: 27em;
+    }
+
+    #home h1 {
+        margin-top: 1em;
+        text-align: center;
+        font-size: 2em;
+        margin-left: 0;
+
+    }
+
+    #home p {
+        margin-left: 50px;
+        margin-right: 10px;
+        font-size: 10px;
+        align-items: center;
+    }
+
+    #home .apresentacao {
+        order: 1; /* Garante que o texto venha primeiro */
+    }
+
+
+
+    #home img {
+        order: 2;
+        width: 100%; /* Faz a imagem ser responsiva */
+        height: auto;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    
+
+    /* Estilos para a segunda seção - removendo imagem */
+
+    #o_que_fazemos img.imagem__AIs {
+        display: none;
+    }
+    /* Ajustando a terceira seção para uma exibição em coluna */
+    #projetos {
+        padding: 20px;
+        height: auto; /* Certifica-se de que a altura se ajusta ao conteúdo */
+    }
+
+    #projetos .projetos {
+        flex-direction: column;
+
+    }
+
+
+    #projetos .bloco__projetos {
+        flex-basis: 100%; /* Os blocos agora ocupam a largura total */
+        margin: 20px 0; /* Ajuste a margem para espaçamento vertical */
+        height: auto; /* Altura se ajusta ao conteúdo */
+        
+    }
+
+    /* Estilos para a quarta seção - elementos em uma única coluna */
+    #AIs .blocos_ai {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #AIs .bloco__AIs {
+        margin-bottom: 20px; /* Espaçamento entre os blocos de AIs */
+    }
+
+    /* Estilos para o footer */
+    footer {
+        background-color: var(--cinza-footer);
+        color: var(--branco-padrao);
+        padding: 20px;
+        text-align: center;
+    }
+
+    footer p {
+        margin: 10px 0; /* Espaçamento para informações */
+    }
+}
