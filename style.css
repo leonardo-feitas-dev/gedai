@@ -60,9 +60,10 @@ header nav a:hover {
 }
 
 #home h1.subtitulo {
-    font-size: 3em; /*40px*/
+    font-size: 2.8em; /*40px*/
     padding-bottom: 0.2em;
-    padding-left: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
 }
 
 #home p {
@@ -142,13 +143,13 @@ header nav a:hover {
 }
 
 #projetos .bloco__projetos h2 {
-    font-size: 3.7vh; 
+    font-size: 1.3em;  
     margin-bottom: 10px; 
     text-align: center; 
 }
 
 #projetos .bloco__projetos p {
-    font-size: 3vh;
+    font-size: 1.2em;
     margin-top: 10px; 
     margin-bottom: 20px; 
     min-height: 100%;
@@ -250,11 +251,9 @@ footer .text__info {
 .projetos a{   
     background-color: var(--azul-padrao);
     color: var(--branco-padrao);
-    padding: 20px;
     flex-basis: 33%;
     box-sizing: border-box;
     border-radius: 15px;
-    margin: 10px; 
     text-align: center;
     display: inline-block; 
     vertical-align: top; 
@@ -348,13 +347,18 @@ footer .text__info {
         margin-left: 0;
     }
 
-    
+    #home h1{
+        text-align: center;
+        margin-left: 0em;
+        font-size: 2em;
+    }
 
     /* Estilos para a segunda seção - removendo imagem */
 
     #o_que_fazemos img.imagem__AIs {
         display: none;
     }
+
     /* Ajustando a terceira seção para uma exibição em coluna */
     #projetos {
         padding: 20px;
@@ -372,6 +376,10 @@ footer .text__info {
         margin: 20px 0; /* Ajuste a margem para espaçamento vertical */
         height: auto; /* Altura se ajusta ao conteúdo */
         
+    }
+
+    #projetos h1 {
+        font-size: 2em;
     }
 
     /* Estilos para a quarta seção - elementos em uma única coluna */
